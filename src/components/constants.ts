@@ -1,0 +1,1 @@
+export const LAYOUT_TRANSITION_DURATION_IN_MS = 500;

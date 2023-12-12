@@ -1,0 +1,62 @@
+section {
+    transition-property: height;
+    transition-timing-function: cubic-bezier(0.5,0.25,0,1);
+    overflow: hidden;
+}
+
+.expanded {
+    height: calc(100vh - (4 * 60px));
+}
+
+.collapsed {
+    height: 60px;
+}
+
+#home {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#about {
+    background-color: rgba(0, 0, 0, .25);
+}
+
+#skills {
+    background-color: rgba(0, 0, 0, .50);
+}
+
+#projects {
+    background-color: rgba(0, 0, 0, .75);
+}
+
+#contacts {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+.section-title {
+    color: #FFF;
+    text-align: right;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    height: 60px;
+    align-items: center;
+    line-height: 60px;
+    padding-right: 16px;
+    font-family: monospace;
+}
+
+#home .section-title {
+    color: #000000;
+}
+
+.collapsed .section-title:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.expanded .section-title {
+    text-decoration: underline;
+}
+
+
