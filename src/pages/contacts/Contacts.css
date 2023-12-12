@@ -1,0 +1,19 @@
+.contacts-content {
+    box-sizing: content-box;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+.contacts-link-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contacts-link-icons > * {
+    cursor: pointer;
+}
+

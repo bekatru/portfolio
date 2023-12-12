@@ -2,6 +2,9 @@ section {
     transition-property: height;
     transition-timing-function: cubic-bezier(0.5,0.25,0,1);
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .expanded {
