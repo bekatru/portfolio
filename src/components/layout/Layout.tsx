@@ -1,8 +1,9 @@
-import {FC, useCallback, useEffect, useState} from 'react';
+import {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import Section from '../section/Section';
 import {LAYOUT_TRANSITION_DURATION_IN_MS} from '../constants';
+import Contacts from '../../pages/contacts/Contacts';
 
-const SECTIONS = [
+const SECTIONS: { id: string, title: string, children?: ReactNode }[] = [
   {
     id: 'home',
     title: 'home',
@@ -22,6 +23,7 @@ const SECTIONS = [
   {
     id: 'contacts',
     title: 'contacts',
+    children: <Contacts/>
   },
 ];
 
@@ -55,13 +57,11 @@ const Layout: FC = () => {
       {SECTIONS.map((props) =>
 
         <Section
-          id={props.id}
-          title={props.title}
           onTitleClick={() => addSelectedSectionIdToQueue(props.id)}
           selected={selectedSectionId === props.id}
           key={props.id}
+          {...props}
         />
-
       )}
     </>
   );
